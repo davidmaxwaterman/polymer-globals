@@ -1,0 +1,19 @@
+/**
+ * my-app.html
+ */
+<link rel='import' href='app-globals'>
+<link rel='import' href='sub-element'>
+
+<polymer-element name='my-app' attribute='myappattribute'>
+<template>
+  <app-globals id='globals'></app-globals>
+  <sub-element id='subelement'></sub-element>
+</template>
+<script>
+Polymer({
+  myappattributeChanged: function(oldValue,newValue) {
+    this.$.globals.someGlobalVariable=someValueDerivedFromNewValue;
+  },
+});
+</script>
+</polymer>

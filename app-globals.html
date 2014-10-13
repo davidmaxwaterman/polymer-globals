@@ -1,0 +1,22 @@
+/**
+ * app-globals.html
+ */
+<link rel='import' href='bower_components/polymer/polymer.html>
+
+<polymer-element name='app-globals'>
+<script>
+(function() {
+var _someGlobalVariable;
+
+Polymer({
+  get someGlobalVariable() {
+    return _someGlobalVariable;
+  },
+
+  set someGlobalVariable(newValue) {
+    _someGlobalVariable=newValue;
+  },
+});
+})();
+</script>
+</polymer>

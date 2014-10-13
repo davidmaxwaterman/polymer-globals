@@ -1,0 +1,19 @@
+{
+  "name": "polymer-globals",
+  "version": "0.0.0",
+  "homepage": "https://github.com/davidmaxwaterman/polymer-globals",
+  "authors": [
+    "Max Waterman <max.waterman@intel.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/Polymer#~0.4.2"
+  }
+}

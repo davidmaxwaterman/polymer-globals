@@ -1,0 +1,26 @@
+/**
+ * sub-element.html
+ */
+
+<link rel='import' href='app-globals'>
+
+<polymer-element name='sub-element'>
+<template>
+  <!--            This doesn't seem to work ----vvvvvvvvvvvvv -->
+  <app-globals id='globals' someGlobalVariable='{{myProperty}}'></app-globals>
+</template>
+<script>
+Polymer({
+  created: function() {
+    this.myProperty='NOT SET';
+  },
+
+  ready: function() {
+    self=this;
+    setTimeout(function() {
+      console.log('SE:myProperty=%s',self.myProperty); // ALWAYS 'NOT SET'
+    },2000);
+  },
+});
+</script>
+</polymer>
