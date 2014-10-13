@@ -1,26 +1,26 @@
-/**
- * sub-element.html
- */
-
-<link rel='import' href='app-globals'>
+<link rel='import' href='app-globals.html'>
 
 <polymer-element name='sub-element'>
 <template>
   <!--            This doesn't seem to work ----vvvvvvvvvvvvv -->
-  <app-globals id='globals' someGlobalVariable='{{myProperty}}'></app-globals>
+  <app-globals id='globals' someglobalvariable='{{myproperty}}'></app-globals>
 </template>
 <script>
 Polymer({
   created: function() {
-    this.myProperty='NOT SET';
+    this.myproperty='NOT SET';
+  },
+
+  mypropertyChanged: function(oldValue,newValue) {
+    console.log('SE:mypropertyChanged to %s',newValue); 
   },
 
   ready: function() {
     self=this;
     setTimeout(function() {
-      console.log('SE:myProperty=%s',self.myProperty); // ALWAYS 'NOT SET'
+      console.log('SE:myProperty=%s',self.myproperty); // ALWAYS 'NOT SET'
     },2000);
   },
 });
 </script>
-</polymer>
+</polymer-element>
